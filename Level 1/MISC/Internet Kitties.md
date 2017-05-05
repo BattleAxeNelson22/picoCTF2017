@@ -8,11 +8,11 @@ To figure out how to use it, you can run "man nc" or "nc -h" on the shell, or se
 # Write Up
 The hint is pretty straight forward, use netcat. The proper syntax is as follows:
 
-$nc <address> <port?
+`$nc <address> <port>`
 
 or in this CTF
 
-$nc shell2017.picoctf.com 40660
+`$nc shell2017.picoctf.com 40660`
 
 This command will connect to port 40660 at shell2017.picoctf.com, the terminal will be happy and give you the flag.
 
