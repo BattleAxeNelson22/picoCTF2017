@@ -11,7 +11,7 @@ Change Directory to /problems/f8fc794974ad619254d983bc423608c6, from the termina
 
 once here list contents of the directory
 
-`ls'
+`ls`
 
 You'll see "trunk"
 
@@ -29,7 +29,7 @@ a branch and a trunk! Given the text in the challenge keep following the trunk, 
 
 then hit 'tab' to autocomplete and you'll see
 
-'cd trunk47a0'
+'cd trunk47a0`
 
 as you repeat the steps above eventually you'll come to a flag. Once at the flag, display the file by using cat
 
@@ -41,7 +41,7 @@ To make the process of following the trunk easier you don't need to enter each t
 
 `cd trunk/trunk47a0/trunk599f/trunk4e66/trunke117/trunk64f5/trunk9721/trunk1e42/'
 
-you could skip the cd even and just do
+You could skip the cd even and just do the following:
 
 `cat trunk/trunk47a0/trunk599f/trunk4e66/trunke117/trunk64f5/trunk9721/trunk1e42/flag`
 
