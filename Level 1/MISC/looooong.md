@@ -31,7 +31,7 @@ The easiest way to do this is going to be to write a very quick python command, 
 python tells the terminal we're going to initiate python, the -c flag stands for 'command' this will run the rest of your command string as if its a script, which is why the rest of the command string is in quotes, that the 'script' we're telling python to run. The print command simply prints what you tell it to, in this case we're telling it to print z 730 times and then add the number 6 to the end of that string. Your challenge will be different so replace the variables appropriatly, and you'll be rewarded with the flag.
 
 If youre still too slow you can write and execute a script that connects to the port, parses the information, pulls out the characters and numbers of times they need to be printed, and then returns the requested characters to the terminal. While slightly more challenging is still a good learning expierence, here's a script that will accomplish such task along with comments explaining each element:
-
+```python
 `#! /usr/bin/env python 3`
 `# The above line makes this an executable and tells the terminal to use python.`
 `##`
@@ -79,7 +79,7 @@ If youre still too slow you can write and execute a script that connects to the 
 print(s.recv(4096).decode("utf-8"))`
 
 `#congrats, you got the flag in the most complicated way possible!`
-
+```
 That wraps up the script!
 
 # Resources
