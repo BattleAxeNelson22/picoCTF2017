@@ -26,12 +26,19 @@ not that i escaped(\) the backslash(/) escaping the backslash will treat it as t
 give the shell a few seconds to start finding the pieces of the flag, eventually you'll see this:
 
 >01:28:03 flagperson: this is part 1/8 of the flag - 1a2e
+
 >01:28:05 flagperson: this is part 2/8 of the flag - 3d0a
+
 >01:28:07 flagperson: this is part 3/8 of the flag - 6310
+
 >01:28:07 flagperson: this is part 4/8 of the flag - 682c
+
 >01:28:08 flagperson: this is part 5/8 of the flag - 6be0
+
 >01:28:10 flagperson: this is part 6/8 of the flag - e319
+
 >01:28:12 flagperson: this is part 7/8 of the flag - d1b5
+
 >01:28:15 flagperson: this is part 8/8 of the flag - 2f53
 
 Once you have the 8th piece hit Ctrl+C in the terminal, this isn't going to be to copy anything, this is going to get the command to stop working and bring you back to the shell.
