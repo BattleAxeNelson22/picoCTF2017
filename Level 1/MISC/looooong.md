@@ -32,53 +32,53 @@ python tells the terminal we're going to initiate python, the -c flag stands for
 
 If youre still too slow you can write and execute a script that connects to the port, parses the information, pulls out the characters and numbers of times they need to be printed, and then returns the requested characters to the terminal. While slightly more challenging is still a good learning expierence, here's a script that will accomplish such task along with comments explaining each element:
 ```python
-`#! /usr/bin/env python 3`
-`# The above line makes this an executable and tells the terminal to use python.`
-`##`
-`# This is a python script for the looooong challenge.`
+#! /usr/bin/env python 3
+# The above line makes this an executable and tells the terminal to use python.
+##
+# This is a python script for the looooong challenge.
 
-`import re`
+import re
 
-`# Import regular expression, this tells the interpreter that we will use regular expressions in the script. Regular expression will be needed in order to parse the information on the other end of the socket`
+# Import regular expression, this tells the interpreter that we will use regular expressions in the script. Regular expression will be needed in order to parse the information on the other end of the socket
 
-`import socket`
+import socket
 
-`# Import socket module, this tells the interpreter that we're gonna need to do some work with a socket, so it'll import the stuff we need to make this work.`
+# Import socket module, this tells the interpreter that we're gonna need to do some work with a socket, so it'll import the stuff we need to make this work.
 
-`# Before we begin we'll define a variable for the socket to make things easier to type out below. After we've defined this variable we can call the module attributes much easier.`
-`s=socket.socket()`
+# Before we begin we'll define a variable for the socket to make things easier to type out below. After we've defined this variable we can call the module attributes much easier.
+s=socket.socket()
 
-`# The first step is going to be to connect to the socket. connect will tell the socket module to connect to the address/port combination provided within the argument, similar to doing nc <address> <port>`
-`s.connect(("shell2017.picoctf.com", 30277))`
+# The first step is going to be to connect to the socket. connect will tell the socket module to connect to the address/port combination provided within the argument, similar to doing nc <address> <port>
+s.connect(("shell2017.picoctf.com", 30277))
 
-`# Now we need to read the instructions. recv will tell the socket module to recieve information, we'll need to provide some instructions on how much to recieve, the buffer, and how to interpret the bits that re recieved, to make them legible we want them in UTF8. Define a variable "instructions" as what the socket module reads from the address provided previously.`
-`instructions=s.recv(4096).decode("utf-8")`
-`print(instructions)`
+# Now we need to read the instructions. recv will tell the socket module to recieve information, we'll need to provide some instructions on how much to recieve, the buffer, and how to interpret the bits that re recieved, to make them legible we want them in UTF8. Define a variable "instructions" as what the socket module reads from the address provided previously.
+instructions=s.recv(4096).decode("utf-8")
+print(instructions)
 
-`# We have the instructions, so now we need to parse them, I'm not going to teach you regular expressions in this script but I'll try to explain what they're doing. `
-`# First lets find the letter we need to print a number of times. The following rex will look for the string "'?' character" within the previously defined instructions and define the located character as letter.`
-`#the group flag at the end tells you what character in the results to grab, in the 0 column there would be a quote, while the 1st column character is going to tbe the letter we need.`
-`letter=re.search("'([A-Za-z])' character", instructions).group(1)`
-`print(letter)`
+# We have the instructions, so now we need to parse them, I'm not going to teach you regular expressions in this script but I'll try to explain what they're doing.
+# First lets find the letter we need to print a number of times. The following rex will look for the string "'?' character" within the previously defined instructions and define the located character as letter.
+#the group flag at the end tells you what character in the results to grab, in the 0 column there would be a quote, while the 1st column character is going to tbe the letter we need.
+letter=re.search("'([A-Za-z])' character", instructions).group(1)
+print(letter)
 
-`#now we need to find out how many times we're actually going to print it. same practice as above, but we want the charcter located to be treated as an integer, so when we do the multiplication later the intepreter understands. We'll add a + to the rex, which basically means find as many numbers in this string as possible, we aren't actually looking for a number between 0 and 9, we're looking for multiple digits between 0 and 9. group is gonna be a little funnier here, in the 0 column you'll have the single quote, in the 1 column you'll have the entire integer, whether it be 9 or 999.`
-`count=int(re.search("'([0-9]+)' times", instructions).group(1))`
-`print(count)`
+#now we need to find out how many times we're actually going to print it. same practice as above, but we want the charcter located to be treated as an integer, so when we do the multiplication later the intepreter understands. We'll add a + to the rex, which basically means find as many numbers in this string as possible, we aren't actually looking for a number between 0 and 9, we're looking for multiple digits between 0 and 9. group is gonna be a little funnier here, in the 0 column you'll have the single quote, in the 1 column you'll have the entire integer, whether it be 9 or 999.
+count=int(re.search("'([0-9]+)' times", instructions).group(1))
+print(count)
 
-`#lastly, we need the final character, same theory as above but note that this can be a letter or a number.`
-`last=re.search("followed by a single '([A-Za-z0-9])'", instructions).group(1)`
-`print(last)`
+#lastly, we need the final character, same theory as above but note that this can be a letter or a number.
+last=re.search("followed by a single '([A-Za-z0-9])'", instructions).group(1)
+print(last)
 
-`#now that we have the variables defined we need to sticth them all together. the "\n" basically tells the console to hit enter.`
-`answer=(letter * count) + last + "\n"`
+#now that we have the variables defined we need to sticth them all together. the "\n" basically tells the console to hit enter.
+answer=(letter * count) + last + "\n"
 
-`#now we gotta send them that answer!`
-`s.send(answer.encode("utf-8"))`
+#now we gotta send them that answer!
+s.send(answer.encode("utf-8"))
 
-`#everything above is happening in the background, so we're gonna want to make sure we see the shell's response, which is going to print it to the socket, lets call up the socket again quick and print what it sees, which we really really hope is gonna be the flag.
-print(s.recv(4096).decode("utf-8"))`
+#everything above is happening in the background, so we're gonna want to make sure we see the shell's response, which is going to print it to the socket, lets call up the socket again quick and print what it sees, which we really really hope is gonna be the flag.
+print(s.recv(4096).decode("utf-8"))
 
-`#congrats, you got the flag in the most complicated way possible!`
+#congrats, you got the flag in the most complicated way possible!
 ```
 That wraps up the script!
 
