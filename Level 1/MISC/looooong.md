@@ -26,7 +26,7 @@ You'll be greeted with a challenge! This challenge will change everytime you att
 
 The easiest way to do this is going to be to write a very quick python command, here's how to get started. 
 
-'python -c "print 'z'*730 + '6'"`
+`python -c "print 'z'*730 + '6'"`
 
 python tells the terminal we're going to initiate python, the -c flag stands for 'command' this will run the rest of your command string as if its a script, which is why the rest of the command string is in quotes, that the 'script' we're telling python to run. The print command simply prints what you tell it to, in this case we're telling it to print z 730 times and then add the number 6 to the end of that string. Your challenge will be different so replace the variables appropriatly, and you'll be rewarded with the flag.
 
@@ -80,7 +80,7 @@ print(s.recv(4096).decode("utf-8"))
 
 #congrats, you got the flag in the most complicated way possible!`
 
-
+That wraps up the script!
 
 # Resources
 https://linux.die.net/man/1/python
