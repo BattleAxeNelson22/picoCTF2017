@@ -84,5 +84,7 @@ That wraps up the script!
 
 # Resources
 https://linux.die.net/man/1/python
+
 https://docs.python.org/2/library/re.html#module-re
+
 https://docs.python.org/2/library/socket.html
