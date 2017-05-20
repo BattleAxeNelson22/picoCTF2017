@@ -1,4 +1,4 @@
-# Hex2Raw - 20 PTS
+# Raw2Hex - 20 PTS
 This program just prints a flag in raw form. All we need to do is convert the output to hex and we have it! CLI yourself to /problems/900be7006255006d8d4e09164dba63c0 and turn that Raw2Hex!
 
 ## Hint
