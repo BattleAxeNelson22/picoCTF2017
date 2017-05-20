@@ -35,6 +35,7 @@ Then we just need to tell cut that we only want to grab the second field. We can
 So piping raw2hex to the cut command, dilimitting on colon(:) and then outputting the second field gets us the raw flag.
 
 `./raw2hex | cut -d ':' -f 2`
+
 `10͓͟D█6␉▒├├┌␊▒│␊┼␊┌┼@░␊┌┌↑┬␊␉:/␉┌␊└/9██␉␊7██6255██6␍8␍4␊█9164␍␉▒63␌█$ `
 
 We still need to convert that to hex though.
