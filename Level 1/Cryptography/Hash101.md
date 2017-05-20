@@ -62,6 +62,23 @@ Enter your decimal into the terminal, and move onto step 3!
 >
 >TO UNLOCK NEXT LEVEL, give me a string that will result in a 9 after being transformed with the mentioned example hashing function
 
+This one is pretty hard to explain, heres some sample responses:
+
+a - sum of all characters = 97. 97 mod 16 = 1. 
+b - sum of all characters = 98. 98 mod 16 = 2.
+c - sum of all characters = 99. 99 mod 16 = 3.
+d - sum of all characters = 100. 100 mod 16 = 4.
+
+That should give you idea of wher we're going with this. But how do you know what the sum of a binary is going to be? How is a = 97?
+
+1st, use an ascii to hex convert to convert "a" to hex. And you get 61. Then use a hex to decimall converter to convert "61" to decimal, and you get 97.
+
+modulus(mod) means to get the remainder of a division. so 97/16 = 6.0625, but we want to round that down to 6. Then take 16x6 to get 96. Then subtract this from the original numbre, (97) so 97 mod 16 = 1.
+
+Its a little complicated sure. 
+
+So for this level, use the appropriate letter to get you the correct modulus. Since my challenge is to get 9 as a result, i'll use the 9th letter of the alphabet "i".
+
 >Correct! Completed level 3
 >
 >--------------- LEVEL 4: Real Hash ---------------
