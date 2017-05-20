@@ -75,19 +75,28 @@ Close out of Puttygen, close out of notepad++ and now open mRemonteNG.
 In your Connections Window, highlight "Connections" and then click the folder with the plus to create a new Connections folder. Name your new folder PICOCTF, and then highlight the folder. Now click the new connection icon, to the left of the new folder icon.
 
 In the config window make the following updates:
+
 Name: picoctf
+
 Hostname/IP: shell2017.picoctf.com
+
 Username: <use the username you registered with pico>
+
 Password: <your password for picoctf>
+
 Protocol: SSH version 2
+
 Port: 22
+
 Putty Session: Default Settings
+
 
 Now you should be able to double click your connection in the Connections tab, and you will be automatically connected to the picoctf system.
 
 Now in mRemoteNG, click on Tools > Options > Advanced. Then in the advanced menu click on Launch PuTTY. This will open a window called PuTTYNG Configuration. In the menu on the left expand(+) SSH and then double click on Auth. Once on this menu click the "Browse". Browse to your PRIVATE key, this is the one with the .ppk extension. Once its selected and you are back on the PuTTYNG config menu with the key path in the Browse box, then click on Session. Under "Saved Sessions" in the texbox enter "PICOCTF_SSH", and then click Save. This will return you to mRemoteMG
 
 In the COnfig window change the follwoing field:
+
 Putty Session: PICOCTF_SSH
 
 You should still have a terminal open in mRemoteNG for picoctf, if not start up a new connection by double clicking picoctf in your Connections menu. (You'll see your key was refused, but you'll still be connected via Username and Password).
@@ -97,10 +106,14 @@ Now we need to put our public key on the system. First you'll need to create the
 `mkdir ~/.ssh;chmod 700 ~/.ssh; touch ~/.ssh/authorized_keys;chmod 600 ~/.ssh/authorized_keys`
 
 We did 4 different commands in that one command string, each command was seperated by a semi colon. Heres a breif explanation of what each command did:
-mkdir ~/.ssh - This created a directory titled .ssh
-chmod 700 ~/.ssh - This changed the rights on the .ssh direcotry. 700 allows the owner(you) to read, write and execute the directory.
-touch ~/.ssh/authorized_keys - Touch, while you can do a few things with it, in this case creates a new file inside the .ssh directory called "authorized_keys" because the file did not already exist.
-chmod 600 ~/.ssh/authorized_keys - This changed the rights on the authorized_keys file. This allows the owner(you) to read and write to the file.
+
+*mkdir ~/.ssh* - This created a directory titled .ssh
+
+*chmod 700 ~/.ssh* - This changed the rights on the .ssh direcotry. 700 allows the owner(you) to read, write and execute the directory.
+
+*touch ~/.ssh/authorized_keys* - Touch, while you can do a few things with it, in this case creates a new file inside the .ssh directory called "authorized_keys" because the file did not already exist.
+
+*chmod 600 ~/.ssh/authorized_keys* - This changed the rights on the authorized_keys file. This allows the owner(you) to read and write to the file.
 
 now to verify you created the file and folder run:
 
@@ -115,6 +128,7 @@ Go open the PICOCTF-formatted.pub file in a text editor(notepad++) and copy the 
 `echo '<rightclick>' >> .ssh/authorized_keys`
 
 Your command should look similar to this:
+
 `echo 'ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAgEAhOWOIDVpdMLs6M1rw7tAg2YLfaDYin6nhzDabJpPDUHwDRRsQvgzxaSf7j192f/DbPlv1WySKUrycEbhtUCCi+ucd3fNuLhiGdXa1igqsSklqWSVdIMmxUfZjQuMmHfsNo69GLSt6Zt1uY9SPhymOl7EILbt4J9ow1YwmPORcihdjSqY5elJg1ryxRik8JYbDvL2MS/2Kjc+PGqJoZOAPiNzK8E1iEEdFNdFBoH+nxfeN5miYYNL7arOI9FkB2OUSsUgJcIr0xd6zO3mzVMxiNtg0vjxmceAFFxZn7u7xyiTPd8+UKEeitacfuuDBGyCzMz+i4x+oAbPMaLMi0goo6qn5ZrBxD4IV8A8IDfnQR5beWw9aGaF+xwfnwldP2UTrKzVRlifN+rme/GF3x1ktc1GAYIVU35TpcCXFj7p9QQcHgs6SJ4OZTtU8qiFhXiWQHRXathCIDs8oDB9jCz8RFO2/5ZTDiC0Zyg9ry9w9mntNnASM/F28C5wedUJ5chuA9/SBRmf9UJ7Qu5O+wnk3agOY5V8ooCGzFAzouqH5otnd0m24699rSWGhFPTA9jkp1URA8p9NeYdy73MJ7C7sbKmmLPdskyetk8uKqcgAWepXjp0oJ0oYZZ/yWuazQvKOUQHqQfOU5NS1WT58aH452u/NOFj1o7WxFA3RtvWjcc= PICOCTF' >> .ssh/authorized_keys`
  
 Then hit enter. To verify the key information was sent to the authorized key file you can cat it.
@@ -125,12 +139,14 @@ And you should see the contents of the file look like your formatted key file.
 
 We have one last thing to do.
 
-Connect to picoctf using SSH keys:
-in mRemoteNG, close your connection. In the Config menu for picoctf delete your password from the password field.
+**Connect to picoctf using SSH keys:**
+
+In mRemoteNG, close your connection. In the Config menu for picoctf delete your password from the password field.
 
 now in the conenctions window double click your picoctf connection, to connect.
 
 If you did everything correctly you should see the following:
+
 >Congratulations on setting up SSH key authentication! 
 >here is your flag: who_needs_pwords_anyways
 
