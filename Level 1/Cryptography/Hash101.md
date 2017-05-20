@@ -27,7 +27,7 @@ Per the hint we can just google a lot of this. So look for a Binary to ASCII con
 
 After entering in the binary from the command line and hitting convert you should get a single word. I did the challenge a few times and the answer will vary. So type the answer you get into the command line.
 
-> >pwning
+> \>pwning
 
 Your answer should be accepted and you'll be provided the next step of the challenge:
 
@@ -47,7 +47,7 @@ After entering in the word "pwning" and hitting convert i get the hex "70 77 6e 
 Enter it into the command line without the spaces, and if its accepted you'll be asked for the decimal.
 
 >Now decimal
->dec>
+>dec\>
 
 This time look for a converter to get you from Hex to Decimal, again i prefer rapid tables: http://www.rapidtables.com/convert/number/hex-to-decimal.htm
 
