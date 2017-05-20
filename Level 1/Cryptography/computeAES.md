@@ -31,7 +31,7 @@ Now its time to write a python script, heres mine with as many comments as neces
 
 from base64 import b64decode
 
-# Import base64de from the base64 module we are going to need to use b64decode. We're going to need this because according to the challenge, all values are base64 encoded. So we're going to need to decode them.
+# Import b64decode from the base64 module we are going to need to use b64decode. We're going to need this because according to the challenge, all values are base64 encoded. So we're going to need to decode them.
 
 from Crypto.Cipher import AES
 
@@ -53,7 +53,11 @@ flag = keymode.decrypt(ciphertext).decode("utf-8")
 print(flag)
 ```
 
+Using the script above i getthe flag:
+>flag{do_not_let_machines_win_983e8a2d}
 
+Enter the contents of the curly bracket into picoctf, and congrats! 50 points!
 
 # Resources
-https://www.blindseeker.com/AVATAR/
+https://docs.python.org/2/library/base64.html
+https://pypi.python.org/pypi/pycrypto
