@@ -27,13 +27,14 @@ Before we start converting everything you see when you run raw2hex, lets cut out
 So cut lets us print selected parts of lines from each FILE to standard output. We want to pull a field that only contains the flag. By default cut dilimts fields by TAB. There aren't any tabs in the output, but there is simething between the text and the flag itself. The colon(:). We can tell cut to change the dilimiter with the -d flag, by passing : as the argument we'll end up with 2 fields:
 
 First Field: The flag is
+
 Second Field: 10͓͟D█6␉▒├├┌␊▒│␊┼␊┌┼@░␊┌┌↑┬␊␉:/␉┌␊└/9██␉␊7██6255██6␍8␍4␊█9164␍␉▒63␌█$  
 
 Then we just need to tell cut that we only want to grab the second field. We can do that with the -f flag, per the manual page. 
 
 So piping raw2hex to the cut command, dilimitting on colon(:) and then outputting the second field gets us the raw flag.
 
-`./raw2hex | cut -d ':' -f 2
+`./raw2hex | cut -d ':' -f 2`
 `10͓͟D█6␉▒├├┌␊▒│␊┼␊┌┼@░␊┌┌↑┬␊␉:/␉┌␊└/9██␉␊7██6255██6␍8␍4␊█9164␍␉▒63␌█$ `
 
 We still need to convert that to hex though.
