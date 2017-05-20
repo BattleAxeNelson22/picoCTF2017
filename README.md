@@ -1,5 +1,5 @@
 # PicoCTF2017
-Welcome to BattleAxeNelson's write-up of the PICOCTF2017.
+Welcome to my write-up of the PICOCTF2017.
 
 ## About Me:
 This is my first CTF, i got through level 1 and decided that the best way for me to actually retain what I had just learned was to do this write up. I went as detailed as I possibly could, so this should be helpful for anyone who's going through this CTF for the first time.
