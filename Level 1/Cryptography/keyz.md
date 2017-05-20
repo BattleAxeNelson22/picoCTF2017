@@ -76,19 +76,19 @@ In your Connections Window, highlight "Connections" and then click the folder wi
 
 In the config window make the following updates:
 
-Name: picoctf
+*Name:* picoctf
 
-Hostname/IP: shell2017.picoctf.com
+*Hostname/IP:* shell2017.picoctf.com
 
-Username: <use the username you registered with pico>
+*Username:* \<use the username you registered with pico>
 
-Password: <your password for picoctf>
+*Password:* \<your password for picoctf>
 
-Protocol: SSH version 2
+*Protocol:* SSH version 2
 
-Port: 22
+*Port:* 22
 
-Putty Session: Default Settings
+*Putty Session:* Default Settings
 
 
 Now you should be able to double click your connection in the Connections tab, and you will be automatically connected to the picoctf system.
@@ -97,7 +97,7 @@ Now in mRemoteNG, click on Tools > Options > Advanced. Then in the advanced menu
 
 In the COnfig window change the follwoing field:
 
-Putty Session: PICOCTF_SSH
+*Putty Session:* PICOCTF_SSH
 
 You should still have a terminal open in mRemoteNG for picoctf, if not start up a new connection by double clicking picoctf in your Connections menu. (You'll see your key was refused, but you'll still be connected via Username and Password).
 
