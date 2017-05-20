@@ -16,8 +16,10 @@ mRemoteNG(http://www.mRemoteNG.org/)
 We're going to use PuTTYgen to generate a pair of SSH keys, and we'll use mRemoteNG to remotely access picoCTF.
 
 **Generate a Key:**
+
 Open puttygen.exe, after installing puttygen. In the Key menu make sure "SSH-2RSA key" is checked, and the radio icon for RSA under Parameters is selected. You can leave the bits for the key at 2048, but i'd recommend increasing the key size to 4096.
 Now click 'Generate' and move your mouse around the blank space as the program instructs. Moving the mouse around creates randomness that helps generate a unique key.
+
 Once done you'll have your key pairs. Change the key comment to PICOCTFSSHKEY, you could change it to whatever you want, or leave it, but whenever you create a key pairing i recommend putting a comment here that helps you remember what the keys are for. Leave the passphrases blank for this CTF exercise so that you don't have to enter in password everytime you SSH to the challenges.
 
 Choose a safe location to store your keys, ideally, create a directory somewhere specifically for this CTF and create a keys folder in there. Save both the public and private keys to that location. Save the public key as "PICOCTF.pub" and save the private key as "PICOCTF.ppk".
@@ -27,6 +29,7 @@ Congratualations, you just created a secure key pairing!
 Now, as per the challenge, we need to put the public key in ~/.ssh/authorized_keys, before we do that we need to make some modifications to the public key file.
 
 **Edit Public Key:**
+
 Public keys are expected to be in a very specific format. When PuTTYgen created our public key, it wasn't in a format that PICOCTF is going to expect, so lets change it.
 
 Open the PICOCTF.pub in a text editor. I highly recommend Notepad++(https://notepad-plus-plus.org)
@@ -66,6 +69,7 @@ If you have to scroll pretty far to the right to now see your entire key string 
 We aren't done editing the key text yet, theres a few things we need to add. At the beginning of the key add "ssh-rsa " (include the space). This tells the system we're using an RSA SSH key. at the end of the key add " PICOCTFKEY"(include the leading space) this is your key comment. This will still be used to help you identify the key. Now save the new file as PICOCTF-formatted.pub to the same directory as your raw public and private keys.
 
 **Provide your key:**
+
 Close out of Puttygen, close out of notepad++ and now open mRemonteNG.
 
 In your Connections Window, highlight "Connections" and then click the folder with the plus to create a new Connections folder. Name your new folder PICOCTF, and then highlight the folder. Now click the new connection icon, to the left of the new folder icon.
