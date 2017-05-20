@@ -57,7 +57,7 @@ Thats going to be a problem so delete the following lines:
 
 Then for the remaining text, we want it to all actually be on one continuous line. The easist way to do this is going to to use find and replace in Notepad++. If you go to manually delete the line breaks, you'll actually delete the first character of the next line too, so don't try to do that or your key pairings will never work.
 
-In Notepad++ select all of your remaining text and then click search and then replace in the dropdown menu. In the Find wgat: field enter "\r\n" without the quotes. Then uncheck the boxes for "Match whole word only", "Match case", and "Wrap around". Lastly ensure the radio for Extended (\n, \r....) is selected.
+In Notepad++ select all of your remaining text and then click search and then replace in the dropdown menu. In the Find what: field enter "\r\n" without the quotes. Then uncheck the boxes for "Match whole word only", "Match case", and "Wrap around". Lastly ensure the radio for Extended (\n, \r....) is selected.
 
 \r\n means CarriageReturn(\r) and LineFeed(\n) these are used to create new lines in certain windows documents. We're replacing them to put the entire key string on one line.
 
