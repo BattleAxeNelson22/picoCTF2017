@@ -33,27 +33,27 @@ Open the PICOCTF.pub in a text editor. I highly recommend Notepad++(https://note
 
 Once you have the public key open in your text editor it will look something like this:
 
->1  ---- BEGIN SSH2 PUBLIC KEY ----
->2  Comment: "PICOCTFSSHKEY"
->3  AAAAB3NzaC1yc2EAAAABJQAAAgEAhOWOIDVpdMLs6M1rw7tAg2YLfaDYin6nhzDa
->4  bJpPDUHwDRRsQvgzxaSf7j192f/DbPlv1WySKUrycEbhtUCCi+ucd3fNuLhiGdXa
->5  1igqsSklqWSVdIMmxUfZjQuMmHfsNo69GLSt6Zt1uY9SPhymOl7EILbt4J9ow1Yw
->6  mPORcihdjSqY5elJg1ryxRik8JYbDvL2MS/2Kjc+PGqJoZOAPiNzK8E1iEEdFNdF
->7  BoH+nxfeN5miYYNL7arOI9FkB2OUSsUgJcIr0xd6zO3mzVMxiNtg0vjxmceAFFxZ
->8  n7u7xyiTPd8+UKEeitacfuuDBGyCzMz+i4x+oAbPMaLMi0goo6qn5ZrBxD4IV8A8
->9  IDfnQR5beWw9aGaF+xwfnwldP2UTrKzVRlifN+rme/GF3x1ktc1GAYIVU35TpcCX
->10 Fj7p9QQcHgs6SJ4OZTtU8qiFhXiWQHRXathCIDs8oDB9jCz8RFO2/5ZTDiC0Zyg9
->11 ry9w9mntNnASM/F28C5wedUJ5chuA9/SBRmf9UJ7Qu5O+wnk3agOY5V8ooCGzFAz
->12 ouqH5otnd0m24699rSWGhFPTA9jkp1URA8p9NeYdy73MJ7C7sbKmmLPdskyetk8u
->13 KqcgAWepXjp0oJ0oYZZ/yWuazQvKOUQHqQfOU5NS1WT58aH452u/NOFj1o7WxFA3
->14 RtvWjcc=
->15 ---- END SSH2 PUBLIC KEY ----
+>---- BEGIN SSH2 PUBLIC KEY ----
+>Comment: "PICOCTFSSHKEY"
+>AAAAB3NzaC1yc2EAAAABJQAAAgEAhOWOIDVpdMLs6M1rw7tAg2YLfaDYin6nhzDa
+>bJpPDUHwDRRsQvgzxaSf7j192f/DbPlv1WySKUrycEbhtUCCi+ucd3fNuLhiGdXa
+>1igqsSklqWSVdIMmxUfZjQuMmHfsNo69GLSt6Zt1uY9SPhymOl7EILbt4J9ow1Yw
+>mPORcihdjSqY5elJg1ryxRik8JYbDvL2MS/2Kjc+PGqJoZOAPiNzK8E1iEEdFNdF
+>BoH+nxfeN5miYYNL7arOI9FkB2OUSsUgJcIr0xd6zO3mzVMxiNtg0vjxmceAFFxZ
+>n7u7xyiTPd8+UKEeitacfuuDBGyCzMz+i4x+oAbPMaLMi0goo6qn5ZrBxD4IV8A8
+>IDfnQR5beWw9aGaF+xwfnwldP2UTrKzVRlifN+rme/GF3x1ktc1GAYIVU35TpcCX
+>Fj7p9QQcHgs6SJ4OZTtU8qiFhXiWQHRXathCIDs8oDB9jCz8RFO2/5ZTDiC0Zyg9
+>ry9w9mntNnASM/F28C5wedUJ5chuA9/SBRmf9UJ7Qu5O+wnk3agOY5V8ooCGzFAz
+>ouqH5otnd0m24699rSWGhFPTA9jkp1URA8p9NeYdy73MJ7C7sbKmmLPdskyetk8u
+>KqcgAWepXjp0oJ0oYZZ/yWuazQvKOUQHqQfOU5NS1WT58aH452u/NOFj1o7WxFA3
+>RtvWjcc=
+>---- END SSH2 PUBLIC KEY ----
 
 Thats going to be a problem so delete the following lines:
 
->1  ---- BEGIN SSH2 PUBLIC KEY ----
->2  Comment: "PICOCTFSSHKEY"
->15 ---- END SSH2 PUBLIC KEY ----
+>---- BEGIN SSH2 PUBLIC KEY ----
+>Comment: "PICOCTFSSHKEY"
+>---- END SSH2 PUBLIC KEY ----
 
 Then for the remaining text, we want it to all actually be on one continuous line. The easist way to do this is going to to use find and replace in Notepad++. If you go to manually delete the line breaks, you'll actually delete the first character of the next line too, so don't try to do that or your key pairings will never work.
 
