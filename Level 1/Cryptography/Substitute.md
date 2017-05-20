@@ -18,5 +18,5 @@ After pasting in the text from the challenge and hitting solve, the first sentan
 if only it was this easy, well we'll learn shortly it isn't. Congrats on getting the flag!
 
 # Resources
-https://www.guballa.de/substitution-solver
+https://www.guballa.de/substitution-solver \n
 http://quipqiup.com/
