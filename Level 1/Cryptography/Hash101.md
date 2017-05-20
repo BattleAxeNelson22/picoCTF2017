@@ -65,8 +65,11 @@ Enter your decimal into the terminal, and move onto step 3!
 This one is pretty hard to explain, heres some sample responses:
 
 a - sum of all characters = 97. 97 mod 16 = 1. 
+
 b - sum of all characters = 98. 98 mod 16 = 2.
+
 c - sum of all characters = 99. 99 mod 16 = 3.
+
 d - sum of all characters = 100. 100 mod 16 = 4.
 
 That should give you idea of wher we're going with this. But how do you know what the sum of a binary is going to be? How is a = 97?
