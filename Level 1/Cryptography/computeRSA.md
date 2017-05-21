@@ -13,7 +13,7 @@ We are however going to need a calculator of some kind that can help us solve th
 
 Good news, you don't even need to boot up a seperate system, we can just use the picoctf terminal.
 
-Python is going to require some different symbols and commands though though, heres what we are actually going to use:
+Python is going to require some different symbols and commands though, heres what we are actually going to use:
 
 `python -c "print((150815 ** 1941) % 435979)"`
 
@@ -21,9 +21,9 @@ First we're telling the terminal to use python, because its powerful. Then we us
 
 Then we're going to tell python to print the results of our forumla. So insert the forumla into the parenthesis that typically come after the print command.
 
-Double astericks are the same as taking something to a power. After we've taked the encrypted value and multiplied it to the 1941th power we need to get the modulus. Percent symbol is the python equivialnt of getting the modulus. 
+Double astericks are the same as taking something to a power. After we've taken the encrypted value(150815) and multiplied it to the 1941th power we need to get the modulus. Percent symbol is the python equivialnt of getting the modulus. 
 
-When youre taking the modulus, youre dividing one value by the other, and then rouding that answer down to the nearest even number. so 13 mod 5 is 3, because 13/5 is 2.6. Round that down to 2. so 5x2 =10 the remainder is 3. Therfore 13%5=3. We're doing the same thing in the calcualtion for this challenge but with numbers so large we can't even comprehend them. Thank you python for doing the dirty work.
+When youre taking the modulus, youre dividing one value by the other, and then rounding that answer down to the nearest even number. so 13 mod 5 is 3, because 13/5 is 2.6. Round that down to 2. so 5x2 =10 the remainder is 3. Therfore 13%5=3. We're doing the same thing in the calcualtion for this challenge but with numbers so large we can't even comprehend them. Thank you python for doing the dirty work.
 
 After entering the command and formula above into the terminal, the terminal will give you the answer.
 
