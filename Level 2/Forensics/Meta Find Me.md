@@ -23,6 +23,8 @@ So now we just need the latitude and longitude. well verexif just told us tthat 
 
 >flag_2_meta_4_me_72_138_5d71
 
+There are actually a handful of ways you can see EXIF data. To get the coordinates you can also save the image to your desktop, then right click > view properties > details. 
+
 # Resources
 http://www.verexif.com/en/
 
