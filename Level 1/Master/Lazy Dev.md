@@ -43,3 +43,5 @@ Entering the curl command into my Linux terminal, i'm rewarded with what looks t
 
 # Resources
 https://curl.haxx.se/docs/manpage.html
+
+https://developers.google.com/web/tools/chrome-devtools/
