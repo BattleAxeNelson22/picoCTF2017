@@ -53,5 +53,7 @@ This script, as detailed as the notes are, should get you the flag, along with a
 
 # Resources
 https://en.wikipedia.org/wiki/Least_significant_bit
+
 https://docs.python.org/3/library/functions.html
+
 www.fastgraph.com/help/bmp_header_format.html
