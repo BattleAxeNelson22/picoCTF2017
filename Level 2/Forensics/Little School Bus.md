@@ -5,6 +5,8 @@ Can you help me find the data in this littleschoolbus.bmp?
 Look at least significant bit encoding!!
 
 # Write Up
+Download that littleshcoolbus.bmp file.
+
 We get to do some steganography, and this hint is going to get us a good starting point: Least Significant bit encoding.
 
 What is a least significant bit? Take a byte 00001001. The least significant bit is the right most bit. thinking outside of bits, take the number 451 for example. The left most number is 4, if we change this number to any other number, our new number could be 100s of numbers away from the original number. However if we change the right most value, 1, our number isn't going to change nearly as much. This is the same concept as least significant bit. So for this challenge we need to read the left most bit of every byte, and reassemble those bits to find the hidden message.
