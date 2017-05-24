@@ -11,7 +11,7 @@ What is a least significant bit? Take a byte 00001001. The least significant bit
 
 There are a number of tools you can download to help out with this, google searching "Least Significant Bit decoding" will get you a number of them. 
 
-In order to accomplish this, lets write a python script:
+But i prefer stumbling my way through python for a few hours and eventually coming up with something:
 
 ```python
 # Least Significant Bit script for BMP files.
