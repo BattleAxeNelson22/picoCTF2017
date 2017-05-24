@@ -168,7 +168,7 @@ Using the rest of the mappings, i eventually get text that looks like my flag:
 
 06 c
 
-or flag{pr355-onwards-deafcb32}
+or flag{pr355-0nwards-deafcb32}
 
 Now the - should actually be _ when we ignored the first fields we ignored the modifiers which would have actually indicated that shift was also pressed when - was pressed.
 
