@@ -9,7 +9,7 @@ Download that littleshcoolbus.bmp file.
 
 We get to do some steganography, and this hint is going to get us a good starting point: Least Significant bit encoding.
 
-What is a least significant bit? Take a byte 00001001. The least significant bit is the right most bit. thinking outside of bits, take the number 451 for example. The left most number is 4, if we change this number to any other number, our new number could be 100s of numbers away from the original number. However if we change the right most value, 1, our number isn't going to change nearly as much. This is the same concept as least significant bit. So for this challenge we need to read the left most bit of every byte, and reassemble those bits to find the hidden message.
+What is a least significant bit? Take a byte 00001001. The least significant bit is the right most bit. thinking outside of bits, take the number 451 for example. The left most number is 4, if we change this number to any other number, our new number could be 100s of numbers away from the original number. However if we change the right most value, 1, our number isn't going to change nearly as much. This is the same concept as least significant bit. So for this challenge we need to read the right most bit of every byte, and reassemble those bits to find the hidden message.
 
 There are a number of tools you can download to help out with this, google searching "Least Significant Bit decoding" will get you a number of them. 
 
